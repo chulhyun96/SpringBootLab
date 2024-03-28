@@ -16,7 +16,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.MOCK)
 @AutoConfigureMockMvc
-public class SampleTestControllerTest {
+public class MockMvcTest {
     @Autowired
     MockMvc mockMvc;
     @Test
@@ -26,4 +26,5 @@ public class SampleTestControllerTest {
                 .andExpect(content().string("Hello User Sample"))
                 .andDo(print());
     }
+
 }
