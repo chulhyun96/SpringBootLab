@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Aspect
 public class AspectService {
-    @Around("execution(* springboot.aop..*(..))")
+    @Around("bean(simpleEventService)")
     public Object logAspect(ProceedingJoinPoint pjp) throws Throwable {
         long begin = System.currentTimeMillis();
         Object retVal = pjp.proceed();
