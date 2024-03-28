@@ -18,10 +18,6 @@ public class MockBeanAndTestRestTempTest {
 
     @Autowired
     TestRestTemplate testRestTemplate;
-
-    //내장 톰캣을  사용하여(포트 번호를 겹치지 않게 랜덤으로 받음) 받으면
-    // MockBean 애노테이션을 사용할 수 있다. -> 내가 컨트롤러 계층을 테스트 해보고 싶다면
-    // @MockBean을 사용하여 모의 객체를 받을 수 있다
     @MockBean
     SampleTestService mockSampleTestService;
 
