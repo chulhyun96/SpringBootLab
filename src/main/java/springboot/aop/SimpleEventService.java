@@ -2,6 +2,7 @@ package springboot.aop;
 
 import org.springframework.stereotype.Service;
 
+//AOP
 @Service
 public class SimpleEventService implements EventService{
 

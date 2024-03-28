@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component;
 public class AspectApp implements ApplicationRunner {
     @Autowired
     EventService service;
-
     @Override
     public void run(ApplicationArguments args) throws Exception {
         service.createEvent();
