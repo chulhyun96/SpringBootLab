@@ -10,6 +10,7 @@ import org.springframework.test.web.servlet.MockMvc;
 
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.is;
+import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
@@ -31,10 +32,9 @@ public class UserControllerTest {
         String userJson = "{\"username\":\"Test\", \"password\":\"123\"}";
         mockMvc.perform(post("/users/create")
                 .contentType(MediaType.APPLICATION_JSON_UTF8)
-                .accept(MediaType.APPLICATION_JSON_UTF8)
+                .accept(APPLICATION_JSON_UTF8)
                 .content(userJson)) // 요청을 만드는 과정
                 .andExpect(jsonPath("$.username",is(equalTo("Test"))))
                 .andExpect(jsonPath("$.password",is(equalTo("123"))));
-
     }
 }
