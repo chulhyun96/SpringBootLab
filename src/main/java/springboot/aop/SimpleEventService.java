@@ -5,7 +5,6 @@ import org.springframework.stereotype.Service;
 //AOP
 @Service
 public class SimpleEventService implements EventService{
-
     @Override
     public void createEvent() {
         try {
